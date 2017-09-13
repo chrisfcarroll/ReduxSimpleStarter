@@ -1,1 +1,14 @@
 .search-bar .form-control, .search-bar .btn {font-size:2rem;}
+.input-group{ margin: 20px 0}
+
+
+.table.weather td,th{
+  vertical-align: middle ;
+  text-align: center ;
+}
+.table.weather svg{}
+
+.table.weather td:first-of-type,
+.table.weather td:first-of-type > div {
+    height: 200px; width:250px;
+}

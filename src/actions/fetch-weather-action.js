@@ -14,7 +14,7 @@ const knownCodes={
 export const FETCH_WEATHER='FETCH_WEATHER';
 
 export function fetchWeather(location){
-  const code= knownCodes[location.toUpperCase()] || '310158';
+  const code= Number.isInteger(parseInt(location)) ? location : knownCodes[location.toUpperCase()] ;
   const url= ROOT_url.replace('{0}',code);
   const request= axios.get(url);
   return {type: FETCH_WEATHER, payload:request};
